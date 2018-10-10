@@ -1,15 +1,17 @@
-function masque(){
+function hide(){
   document.getElementById('text').style.display = 'none'; //Masque la div donc le texte qui est dedans
 }
-function affiche(){
+function display(){
   document.getElementById('text').style.display = 'block';
 }
 
-function affichemasque(){
+//Autre solution
+
+function hideDisplay(){
   var etat = document.getElementById('text2').style.display; // Vérifie l'état de l'affichage
-  if (etat == 'block') { // Si affiché alors on le masque
-    document.getElementById('text2').style.display = 'none';
+  if (etat == 'none') { // Si non affiché alors on l'affiche
+    document.getElementById('text2').style.display = 'block';
   } else {
-    document.getElementById('text2').style.display = 'block'; // ou inversement
+    document.getElementById('text2').style.display = 'none'; // ou inversement
   }
 }
